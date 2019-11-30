@@ -70,7 +70,7 @@ $refalreadyexists = 0;
 
 $id = GETPOST('id', 'int');
 $ref = GETPOST('ref', 'alpha');
-$type = GETPOST('type', 'int');
+$type = (GETPOST('type', 'int')!=='')? GETPOST('type', 'int'):0;
 $action = (GETPOST('action', 'alpha') ? GETPOST('action', 'alpha') : 'view');
 $cancel = GETPOST('cancel', 'alpha');
 $backtopage = GETPOST('backtopage', 'alpha');
